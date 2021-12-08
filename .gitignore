@@ -1,6 +1,7 @@
 .vscode
-Linked List/.vs/
-Linked List/Linked.cpp
+Linked Lists/.vs/
+Linked Lists/Linked.cpp
+Linked Lists/Linked.exe
 /other/
 /Custom Vector/
 Queue/QueueMain.cpp
