@@ -18,5 +18,8 @@ This is Where I'm going to dump my Data Structures and Algorithms Programs.
     * Bubble Sort Algorithm
     * Insertion Sort Algorithm
     * Selection Sort Algorithm
+    * Quick sort Algorithm
+    * Count sort Algorithm
+    * Merge sort Algorithm
 
 > **Will add more content as I continue to learn DSA.**
