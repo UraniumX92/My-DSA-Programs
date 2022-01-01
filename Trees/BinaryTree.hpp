@@ -172,7 +172,22 @@ class BST
 
         ~BST()
         {
-            // To do.
+            std::stack<NodeBT<Type>*> st;
+            NodeBT<Type>* current = root;
+            while(current!=NULL || !st.empty())
+            {
+                while(current!=NULL)
+                {
+                    st.push(current);
+                    current = current->left;
+                }
+                current = st.top();
+                NodeBT<Type>* temp = current;
+                st.pop();
+                current = current->right;
+                delete temp;
+            }
+            free(this);
         }
 
         // Returns a Bool. true if insertion is successful. else false.
