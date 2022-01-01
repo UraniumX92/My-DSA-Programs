@@ -10,4 +10,7 @@ Stack/StackMain.cpp
 Stack/StackMain.exe
 Sorting/sortmain.cpp
 Sorting/sortmain.exe
+Trees/TreeMain.cpp
+Trees/CustomVector.hpp
+Trees/TreeMain.exe
 DataStructuresAndAlgorithms.code-workspace
