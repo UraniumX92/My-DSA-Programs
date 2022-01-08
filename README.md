@@ -25,5 +25,8 @@ This is Where I'm going to dump my Data Structures and Algorithms Programs.
     * Binary Search Tree
         * Traversal Algorithms.
         * Insertion and Deletion Algorithms
+    * AVL Tree
+        * Rotation Algorithm
+        * Insertion Algorithm which rotates accordingly while inserting a new value
 
 > **Will add more content as I continue to learn DSA.**

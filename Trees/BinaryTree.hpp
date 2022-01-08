@@ -41,7 +41,6 @@ template<typename Type>
 class BST
 {
     private:
-
         NodeBT<Type>* inOrderPredecessor(NodeBT<Type>* node)
         {
             node = node->left;
@@ -150,9 +149,11 @@ class BST
         }
 
     public:
-        NodeBT<Type>* root=NULL;
+        NodeBT<Type>* root = NULL;
         
         BST(){}
+
+        // Takes a sorted array pointer and the int which is size of the given array and creates a Balanced BST from given array.
         BST(Type array[],int size)
         {
             this->insert(array[size/2]);
@@ -165,6 +166,7 @@ class BST
                 this->insert(array[i]);
             }
         }
+        
         BST(Type value)
         {
             root = new NodeBT<Type>(value);
