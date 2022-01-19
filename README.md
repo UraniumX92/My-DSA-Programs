@@ -21,12 +21,13 @@ This is Where I'm going to dump my Data Structures and Algorithms Programs.
     * Quick sort Algorithm
     * Count sort Algorithm
     * Merge sort Algorithm
-* Tree
+* Trees
     * Binary Search Tree
         * Traversal Algorithms.
         * Insertion and Deletion Algorithms
     * AVL Tree
-        * Rotation Algorithm
+        * Rotation Algorithms
         * Insertion Algorithm which rotates accordingly while inserting a new value
+        * Deletion Algorithm which rotates accordingly while nodes get deleted.
 
 > **Will add more content as I continue to learn DSA.**

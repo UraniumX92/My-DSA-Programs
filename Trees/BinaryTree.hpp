@@ -94,59 +94,51 @@ class BST
 
         NodeBT<Type>* deletion(Type value,NodeBT<Type>* node)
         {
-            static NodeBT<Type>* exists = search(value);
-            if(!exists)
+            if(node==NULL)
             {
-                std::logic_error err("Given Value Doesn't exist in this BST");
-                throw err;
+                return NULL;
             }
-            else
+            if(node->right==NULL && node->left==NULL)
             {
-                if(node==NULL)
+                if(node==root)
                 {
-                    return NULL;
-                }
-                if(node->right==NULL && node->left==NULL)
-                {
-                    if(node==root)
-                    {
-                        root = NULL;
-                    }
-                    else
-                    {
-                        free(node);
-                    }
-                    return NULL;
-                }
-
-                NodeBT<Type>* temp;
-                if(value > node->data)
-                {
-                    node->right = deletion(value,node->right);
-                }
-                else if(value < node->data)
-                {
-                    node->left = deletion(value,node->left);
+                    root = NULL;
                 }
                 else
                 {
-                    temp = inOrderPredecessor(node);
-                    if(temp)
-                    {
-                        node->data = temp->data;
-                        node->left = deletion(temp->data,node->left);
-                    }
-                    else
-                    {
-                        temp = inOrderSuccessor(node);
-                        node->data = temp->data;
-                        node->right = deletion(temp->data,node->right);
-                    }
-
+                    free(node);
                 }
-                return node;
+                return NULL;
             }
+
+            NodeBT<Type>* temp;
+            if(value > node->data)
+            {
+                node->right = deletion(value,node->right);
+            }
+            else if(value < node->data)
+            {
+                node->left = deletion(value,node->left);
+            }
+            else
+            {
+                temp = inOrderPredecessor(node);
+                if(temp)
+                {
+                    node->data = temp->data;
+                    node->left = deletion(temp->data,node->left);
+                }
+                else
+                {
+                    temp = inOrderSuccessor(node);
+                    node->data = temp->data;
+                    node->right = deletion(temp->data,node->right);
+                }
+
+            }
+            return node;
         }
+    
 
     public:
         NodeBT<Type>* root = NULL;
